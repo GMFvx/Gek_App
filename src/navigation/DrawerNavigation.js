@@ -9,6 +9,7 @@ import ToDo from "../screens/ToDo";
 import InProgress from "../screens/InProgress";
 import Done from "../screens/Done";
 import Profile from "../screens/Profile";
+import Configu from "../screens/Configu";
 
 const Drawer = createDrawerNavigator();
 
@@ -53,6 +54,14 @@ export default function DrawerNavigation(){
                options={{
                   drawerIcon: () => <FontAwesome name="user" size={24} color="black" />,
                   drawerLabel: 'Perfil'
+               }}
+            />
+            <Drawer.Screen
+               name= "Config"
+               component={Configu}
+               options={{
+                  drawerIcon: () => <FontAwesome name="gear" size={24} color="black" />,
+                  drawerLabel: 'Config'
                }}
             />
         </Drawer.Navigator>
